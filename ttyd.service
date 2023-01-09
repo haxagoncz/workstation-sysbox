@@ -1,0 +1,10 @@
+[Unit]
+Description=TTYd remote access
+
+[Service]
+User=admin
+ExecStart=/usr/bin/ttyd bash
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
