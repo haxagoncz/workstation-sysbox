@@ -4,3 +4,7 @@ services:
   workstation:
     build: .
     image: haxagon/workstation-sysbox
+    runtime: sysbox-runc
+    ports:
+      - "22:22"
+      - "7681:7681"
