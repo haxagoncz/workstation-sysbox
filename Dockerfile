@@ -3,7 +3,7 @@ FROM nestybox/ubuntu-bionic-systemd
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update
-RUN apt-get install -y wget openssh-server iputils-ping
+RUN apt-get install -y wget openssh-server iputils-ping tcpdump ldnsutils nano
 
 RUN wget -O install-snoopy.sh https://github.com/a2o/snoopy/raw/install/install/install-snoopy.sh && chmod 755 install-snoopy.sh && ./install-snoopy.sh stable
 
