@@ -1,0 +1,10 @@
+[Unit]
+Description=SCENARIO_IS_READY
+
+[Service]
+User=admin
+ExecStart=echo SCENARIO_IS_READY
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
