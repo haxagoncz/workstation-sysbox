@@ -2,8 +2,8 @@
 Description=TTYd remote access
 
 [Service]
-User=admin
-ExecStart=/usr/bin/ttyd bash
+#User=admin
+ExecStart=/usr/bin/ttyd login
 Restart=on-abort
 
 [Install]

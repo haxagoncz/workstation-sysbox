@@ -6,6 +6,8 @@ services:
     image: haxagon/workstation-sysbox
     runtime: sysbox-runc
     tty: true
+    environment:
+      - AMDIN_PASSWORD=mypassword
     ports:
       - "22:22"
       - "7681:7681"

@@ -1,0 +1,9 @@
+[Unit]
+Description=WORKSTATION
+
+[Service]
+PassEnvironment=ADMIN_PASSWORD
+ExecStart=/usr/local/bin/workstation-init.sh
+
+[Install]
+WantedBy=multi-user.target
