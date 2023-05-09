@@ -4,10 +4,11 @@ services:
   workstation:
     build: .
     image: haxagon/workstation-sysbox
+    hostname: haxagon
     runtime: sysbox-runc
     tty: true
     environment:
-      - AMDIN_PASSWORD=mypassword
+      - ADMIN_PASSWORD=admin
     ports:
       - "22:22"
       - "7681:7681"
