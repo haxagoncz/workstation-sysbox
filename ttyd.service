@@ -1,11 +1,11 @@
 [Unit]
 Description=TTYd remote access
+Wants=workstation.service
 
 [Service]
 PassEnvironment=WEB_SHELL
-ExecStart=/bin/bash -c '[ "$WEB_SHELL" == "false" ] || /usr/bin/ttyd login'
+ExecStart=/bin/bash -c '[ "$WEB_SHELL" == "false" ] || /usr/bin/ttyd /usr/sbin/lemurs'
 Restart=on-abort
 
 [Install]
-Wants=workstation.service
 WantedBy=multi-user.target

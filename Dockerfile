@@ -74,6 +74,7 @@ RUN chmod +x /usr/bin/ttyd
 COPY --from=rustbuild /lemurs/target/release/lemurs /usr/sbin/lemurs
 RUN mkdir /etc/lemurs
 COPY --from=rustbuild /lemurs/extra/config.toml /etc/lemurs/config.toml
+RUN sed -i 's/focus_behaviour = "default"/focus_behaviour = "username"/g' /etc/lemurs/config.toml
 RUN sed -i 's/allow_shutdown = true/allow_shutdown = false/g' /etc/lemurs/config.toml
 RUN sed -i 's/allow_reboot = true/allow_reboot = false/g' /etc/lemurs/config.toml
 
