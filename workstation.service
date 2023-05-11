@@ -2,7 +2,7 @@
 Description=WORKSTATION
 
 [Service]
-PassEnvironment=ADMIN_PASSWORD
+PassEnvironment=PASSWORD USER SHELL ENTRYPOINT_PATH ENTRYPOINT_REMOVE ENTRYPOINT_DEBUG SUDO
 ExecStart=/usr/local/bin/workstation-init.sh
 
 [Install]

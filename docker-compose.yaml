@@ -3,12 +3,14 @@ version: '3'
 services:
   workstation:
     build: .
-    image: haxagon/workstation-sysbox
+    image: haxagon/workstation-sysbox:edge
     hostname: haxagon
     runtime: sysbox-runc
     tty: true
     environment:
-      - ADMIN_PASSWORD=admin
+      - USER=student
+      - PASSWORD=password
+      - SUDO=true
     ports:
       - "22:22"
       - "7681:7681"
