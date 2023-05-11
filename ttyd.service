@@ -2,9 +2,10 @@
 Description=TTYd remote access
 
 [Service]
-#User=admin
-ExecStart=/usr/bin/ttyd login
+PassEnvironment=WEB_SHELL
+ExecStart=/bin/bash -c '[ "$WEB_SHELL" == "false" ] || /usr/bin/ttyd login'
 Restart=on-abort
 
 [Install]
+Wants=workstation.service
 WantedBy=multi-user.target

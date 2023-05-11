@@ -12,9 +12,10 @@ Listens on port 22 (SSH) and 7681 (HTTP terminal)
 | USERNAME | admin | Uživatelské jméno pro vzdálený přístup
 | PASSWORD | admin | Heslo jméno pro vzdálený přístup
 | SHELL | /bin/bash | Výchozí shell uživatele
-| SUDO | false | Přidá uživatele do skupiny sudo
-| WEB_SHELL | false | Spuštění webové konzole
+| SUDO | true | Přidá uživatele do skupiny sudo
+| WEB_SHELL | TRUE | Spuštění webové konzole
 | **Entrypoint** | | |
 | ENTRYPOINT_PATH | /tmp/entrypoint.sh | Cesta ke scriptu, který se spustí při startu kontejneru (musí být spustitelný, nesmí být `/var/lib/entrypoint.sh`)
 | ENTRYPOINT_REMOVE | true | Odstranění scriptu po ukončení
 | ENTRYPOINT_DEBUG | true | Zapnutí bash debug modu pro entrypoint
+| READY | true | Vypíše SCENARIO_IS_READY a tím označí instanci za spuštěnou

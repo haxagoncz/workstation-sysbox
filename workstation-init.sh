@@ -22,7 +22,7 @@ grep -q $USER /etc/passwd || useradd \
 
 useradd --create-home --badnames --shell $LOGIN_SHELL $USER && echo "$USER:$PASS" | chpasswd
 
-if [ "${SUDO}" == "true" ]; then
+if [ "${SUDO}" != "false" ]; then
     usermod -aG sudo $USER
 fi
 

@@ -1,9 +1,13 @@
 [Unit]
-Description=SCENARIO_IS_READY
+Description=Ready
+#Wants=workstation.target
 
 [Service]
-ExecStart=echo SCENARIO_IS_READY
+StandardOutput=journal+console
+PassEnvironment=READY
+ExecStart=/bin/bash -c '[ "$READY" == "false" ] || echo SCENARIO_IS_READY'
 Restart=on-abort
+Type=idle
 
 [Install]
 WantedBy=multi-user.target

@@ -8,9 +8,10 @@ services:
     runtime: sysbox-runc
     tty: true
     environment:
-      - USER=student
+      - USERNAME=student
       - PASSWORD=password
       - SUDO=true
+#      - READY=false
     ports:
       - "22:22"
       - "7681:7681"
