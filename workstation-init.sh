@@ -2,9 +2,6 @@
 
 PASS=${PASSWORD:-admin}
 USER=${USERNAME:-admin}
-
-echo "$USER:$PASS" | chpasswd
-
 LOGIN_SHELL=${SHELL:-/bin/bash}
 ENTRYPOINT_REMOVE=${ENTRYPOINT_REMOVE:-true}
 ENTRYPOINT_PATH=${ENTRYPOINT_PATH:-/tmp/entrypoint.sh}
