@@ -10,13 +10,6 @@ if [ "${ENTRYPOINT_DEBUG}" == "true" ]; then
     set -x
 fi
 
-grep -q $USER /etc/passwd || useradd \
-    \
-    --create-home\
-    --shell $DEFAULT_SHELL\
-    --password $ENCRYPTED_PASSWORD\
-    $USER
-
 useradd --create-home --badnames --shell $LOGIN_SHELL $USER && echo "$USER:$PASS" | chpasswd
 
 if [ "${SUDO}" != "false" ]; then
