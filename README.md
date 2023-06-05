@@ -14,6 +14,7 @@ Listens on port 22 (SSH) and 7681 (HTTP terminal)
 | SHELL | /bin/bash | Výchozí shell uživatele
 | SUDO | true | Přidá uživatele do skupiny sudo
 | WEB_SHELL | TRUE | Spuštění webové konzole
+| WEB_SHELL_PORT | 7681 | Port webové konzole
 | **Entrypoint** | | |
 | ENTRYPOINT_PATH | /tmp/entrypoint.sh | Cesta ke scriptu, který se spustí při startu kontejneru (musí být spustitelný, nesmí být `/var/lib/entrypoint.sh`)
 | ENTRYPOINT_REMOVE | true | Odstranění scriptu po ukončení

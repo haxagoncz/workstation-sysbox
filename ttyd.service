@@ -3,8 +3,8 @@ Description=TTYd remote access
 Wants=workstation.service
 
 [Service]
-PassEnvironment=WEB_SHELL
-ExecStart=/bin/bash -c '[ "$WEB_SHELL" == "false" ] || /usr/bin/ttyd /usr/sbin/lemurs'
+PassEnvironment=WEB_SHELL WEB_SHELL_PORT
+ExecStart=/bin/bash -c '[ "$WEB_SHELL" == "false" ] || /usr/bin/ttyd -p ${WEB_SHELL_PORT:-7681} /usr/sbin/lemurs'
 Restart=on-abort
 
 [Install]

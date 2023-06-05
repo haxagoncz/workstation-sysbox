@@ -11,7 +11,8 @@ services:
       - USERNAME=student
       - PASSWORD=password
       - SUDO=true
+      - WEB_SHELL_PORT=8080
 #      - READY=false
     ports:
       - "22:22"
-      - "7681:7681"
+      - "8080:8080"
