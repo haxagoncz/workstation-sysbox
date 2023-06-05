@@ -3,7 +3,7 @@ version: '3'
 services:
   workstation:
     build: .
-    image: haxagon/workstation-sysbox:edge
+    image: haxagon/workstation-sysbox
     hostname: haxagon
     runtime: sysbox-runc
     tty: true
