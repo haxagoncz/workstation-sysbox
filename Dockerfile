@@ -23,6 +23,8 @@ RUN apt-get update &&                            \
             kmod                                 \
             locales                              \
             sudo                                 \
+            man                                  \
+            ascii                                \
             udev &&                              \
                                                  \
     # Prevents journald from reading kernel messages from /dev/kmsg
