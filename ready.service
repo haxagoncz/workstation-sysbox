@@ -1,6 +1,7 @@
 [Unit]
 Description=Ready
 #Wants=workstation.target
+After=workstation.target
 
 [Service]
 StandardOutput=journal+console
